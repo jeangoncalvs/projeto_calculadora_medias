@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de médias</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- fonts selecionada a partir do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <div class="container"> <!-- "container" utilizado para que seja possível a centralização do conteúdo da página -->
+        <header> <!-- Seção de cabeçalho -->
+            <img src="./images/logo.png" alt="capelo e diploma">
+            <h1>Calculadora de médias</h1>
+        </header>
+        <form id="form-atividade"> <!-- Esta é uma seção de formulário --> <!-- Os id servem para referenciar oque foi escrito no js e no css. -->
+            <input type="text" id="nome-atividade" required placeholder="Nome da atividade" />
+            <input type="number" id="nota-atividade" required placeholder="Nota da atividade" min="0" max="10" />
+            <button type="submit">Adicionar +</button>
+        </form>
+        <table cellspacing="0"> <!-- Seção designada para criação da Tabela, (cellspacing="0" remove o espaçamento responsável por separar as células) -->
+            <thead> <!-- Cabeçalho da tabela -->
+                <tr> <!-- Tag responsável pela divisão em linhas -->
+                    <th> <!-- Tag responsável pela divisão em célulass do cabeçalho -->
+                        Nome da atividade
+                    </th>
+                    <th>Nota da atividade</th>
+                    <th>Aprovado?</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Média final</td> <!-- Conteúdo HardCode para estilização da tela inicial -->
+                    <td id="media-final-valor">---</td>
+                    <td id="media-final-resultado">---</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
